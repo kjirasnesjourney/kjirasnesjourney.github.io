@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- SNES-style controller icon -->
+  <!-- Body -->
+  <rect x="2" y="10" width="28" height="14" rx="7" fill="#e4dbd0"/>
+  <!-- Left D-pad stem horizontal -->
+  <rect x="5" y="15" width="8" height="3" rx="1" fill="#FE2C55"/>
+  <!-- Left D-pad stem vertical -->
+  <rect x="7.5" y="12.5" width="3" height="8" rx="1" fill="#FE2C55"/>
+  <!-- Right buttons -->
+  <circle cx="22" cy="14.5" r="2" fill="#FE2C55"/>
+  <circle cx="26" cy="16.5" r="2" fill="#FE2C55"/>
+  <circle cx="22" cy="18.5" r="2" fill="#FE2C55"/>
+  <circle cx="18" cy="16.5" r="2" fill="#FE2C55"/>
+  <!-- Center buttons -->
+  <rect x="13" y="15.5" width="3" height="2" rx="0.5" fill="#888"/>
+  <rect x="17" y="15.5" width="3" height="2" rx="0.5" fill="#888"/>
+</svg>

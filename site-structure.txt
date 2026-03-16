@@ -1,0 +1,157 @@
+SITE STRUCTURE — Kjira's SNES Journey
+======================================
+Last updated: March 2026
+
+Stack: Vite + React + TypeScript + Tailwind CSS + shadcn/ui
+Font: Silkscreen 400 (font-pixel) for navbar, menu, game card titles
+Theme: Warm beige background #e4dbd0, light/dark/system via ThemeProvider
+Data source: src/data/games.ts (single source of truth for all 42 games)
+
+
+Global / Shell
+--------------
+Navbar (Header.tsx)
+  - Sticky top bar, always #e4dbd0 background regardless of theme
+  - Height: 144px
+  - Left: logo image (logo.png, 128px tall), links to /
+  - Right: "Menu" button (font-pixel 24px) + hamburger icon, opens MenuDrawer
+
+MenuDrawer (Sheet from shadcn/ui, inside Header.tsx)
+  - Slides in from the right
+  - Nav links: Home (/), About (/about)
+  - Links use font-pixel at 3.6rem with gradient hover animation
+  - No close button, no social links
+
+Footer (Footer.tsx)
+  - 3-column grid: Theme Toggle | About link | Credits & Disclaimers link
+  - Theme toggle buttons: Light / Dark / Auto
+  - "Developed by Ney Almeida" centered below columns
+
+
+Home Page (/)  —  Blog.tsx
+--------------------------
+FeaturedGame (BlogHighlight.tsx)
+  - Hero section at the top
+  - Shows the last game in games.ts (most recently added)
+  - Large title (font-pixel), teaser text, "Continue reading" link, box art image
+
+RecentGames
+  - 3-card grid of the 3 games before the featured one (reversed order)
+  - Uses ArticlePreview component
+
+AllGamesHeader
+  - "All Games Played" label with bottom border, uppercase, letter-spaced
+
+CategoryFilterBar
+  - Sticky row (top: 144px to clear navbar) of category filter buttons
+  - Categories pulled from games.ts: All + unique category values
+  - Active category highlighted in pink/red (#FE2C55)
+  - Full viewport width, centered
+
+GamesGrid
+  - 3-column responsive grid of all games (filtered by selected category)
+  - Uses ArticlePreview component
+  - Fade-in animation on scroll via IntersectionObserver
+
+
+Game Review Page (/article/:slug)  —  Article.tsx
+--------------------------------------------------
+GameHeader
+  - Category tag (uppercase, primary color)
+  - Game title (large, centered)
+  - Meta row: year, developer, publisher
+  - Score: 1–5 red stars (ScoreStars component) — only shown if game.score is set
+
+BoxArtHero
+  - Box art image centered, max-height 60vh, object-contain
+  - Muted background strip
+
+ReviewBody
+  - If game.review is set: renders HTML string (dangerouslySetInnerHTML)
+    Supports: h2, p, blockquote
+  - If no review: "Review coming soon" placeholder with 🕹️ icon and link back home
+
+RelatedGames (ArticleRelatedItems.tsx)
+  - "More [Category] games" heading
+  - Up to 3 games from the same category (excluding current)
+  - Uses ArticlePreview cards with AppearOnScroll animation
+
+
+About Page (/about)  —  About.tsx
+----------------------------------
+AboutHero
+  - Logo (logo.png) and persona (Extra long hair.png) side by side, bottom-aligned
+  - AppearOnScroll fade-in
+
+StorySection
+  - Heading: "About the Project"
+  - Text: "A personal journey to play (and sometimes finish) every Super Nintendo game."
+
+MissionQuote
+  - Large centered blockquote: "A journey through 1749 games, a lifetime of memories."
+  - Attribution: Kjira
+
+
+Credits & Disclaimers Page (/privacy)  —  Privacy.tsx
+------------------------------------------------------
+Sections (rendered via ArticleContent component):
+  - No Data Collection
+  - Copyright Disclaimer
+  - Emulation Disclaimer
+  - Credits
+      Character Art: Kjira art by @fyichi
+      Music: OCRemix #3277 Chrono Trigger 'stratification' by melody
+             http://ocremix.org/remix/OCR03277
+
+404 Page (*)  —  NotFound.tsx
+------------------------------
+  - "Page not found" message with link back to home
+
+
+Data
+----
+src/data/games.ts
+  - Array of 42 game objects, exported as `games`
+  - Exported `categories` array (unique category values + "All")
+  - Game object fields:
+      id        number       unique identifier
+      title     string       full game title
+      slug      string       URL slug for /article/:slug
+      image     string       imported WebP from src/assets/boxarts/
+      category  string       genre/category label
+      year      number?      release year (optional)
+      developer string?      developer name (optional)
+      publisher string?      publisher name (optional)
+      score     number?      1–5 rating (optional)
+      teaser    string?      short description for cards (optional)
+      review    string?      full HTML review body (optional)
+
+
+Assets
+------
+src/assets/logo.png              — site logo (used in navbar and About page)
+src/assets/Extra long hair.png   — Kjira persona (used on About page)
+src/assets/boxarts/              — 42 WebP box art images (19–99KB each)
+  Named: "[number] - [Full ROM title].webp"
+  Converted from original PNG/JPG via scripts/convert-boxarts.mjs (Sharp)
+
+
+Shared Components
+-----------------
+ArticlePreview.tsx    — game card (box art, category tag, title, teaser, link)
+BlogHighlight.tsx     — featured game hero (large image, title, description, CTA)
+ArticleRelatedItems.tsx — related games grid (wraps ArticlePreview with AppearOnScroll)
+ArticleComponents.tsx — ArticleContent styled prose wrapper (used in Privacy page)
+AppearOnScroll.tsx    — fade-in animation wrapper triggered by IntersectionObserver
+Section.tsx           — layout wrapper for consistent padding and max-width
+ThemeProvider.tsx     — manages light/dark/system theme via localStorage
+
+
+Routes (App.tsx)
+----------------
+/              → Blog.tsx
+/blog          → Blog.tsx
+/article/:slug → Article.tsx
+/about         → About.tsx
+/privacy       → Credits & Disclaimers (Privacy.tsx)
+*              → NotFound.tsx
