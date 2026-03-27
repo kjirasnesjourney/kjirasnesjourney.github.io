@@ -23,22 +23,54 @@ export const games: Game[] = [
     slug: "jetsons-invasion-planet-pirates",
     image: new URL("../assets/boxarts/1 - Jetsons, The - Invasion of the Planet Pirates (USA).webp", import.meta.url).href,
     category: "Platformer",
-    teaser: "",
     year: 1994,
-    developer: "Natsume",
+    developer: "Sting Entertainment",
     publisher: "Taito",
-  },
+    score: 2,
+    review: `A jornada já começou com surpresas: o primeiro jogo selecionado tem uma versão diferente no Japão, então o review é o mesmo para ambos os jogos.
+
+The Jetsons - Invasion of the Planet Pirates saiu primeiro e com os controles meio imprecisos. O visual do desenho e dos mundos é bem qualquer coisa, mas a mecânica principal do sugador é bacana.
+
+A versão japonesa, Youkai Buster - Ruka no Daibouken veio depois e é mais precisa, os sprites são mais fofinhos e eu sou um weeb imundo, o que claramente influencia no gosto do que seria efetivamente o mesmo jogo
+
+Ambos são difíceis e obtusos, dei quit na quarta ou quinta fase do Ruka porque os bicho são arrombado demais`,
+
+The Jetsons - Invasion of the Planet Pirates saiu primeiro e com os controles meio imprecisos. O visual do desenho e dos mundos é bem qualquer coisa, mas a mecânica principal do sugador é bacana.
+
+A versão japonesa, Youkai Buster - Ruka no Daibouken veio depois e é mais precisa, os sprites são mais fofinhos e eu sou um weeb imundo, o que claramente influencia no gosto do que seria efetivamente o mesmo jogo
+
+Ambos são difíceis e obtusos, dei quit na quarta ou quinta fase do Ruka porque os bicho são arrombado demais`,
+
+The Jetsons - Invasion of the Planet Pirates saiu primeiro e com os controles meio imprecisos. O visual do desenho e dos mundos é bem qualquer coisa, mas a mecânica principal do sugador é bacana.
+
+A versão japonesa, Youkai Buster - Ruka no Daibouken veio depois e é mais precisa, os sprites são mais fofinhos e eu sou um weeb imundo, o que claramente influencia no gosto do que seria efetivamente o mesmo jogo
+
+Ambos são difíceis e obtusos, dei quit na quarta ou quinta fase do Ruka porque os bicho são arrombado demais`,
+
+os jetsons saiu primeiro e com os controles meio imprecisos. o visual do desenho e dos mundos é bem qualquer coisa, mas a mecânica principal do sugador é bacana.
+
+a versão japonesa veio depois e é mais precisa, os sprites são mais fofinhos e eu sou um weeb imundo, o que claramente influencia no gosto do que seria efetivamente o mesmo jogo
+
+mas ambos são difíceis e obtusos, dei quit na quarta ou quinta fase do Ruka porque os bicho são arrombado demais`,
+    teaser: "Primeiro Passo",  },
   {
     id: 2,
     title: "Youkai Buster Ruka no Daibouken",
     slug: "youkai-buster-ruka",
     image: new URL("../assets/boxarts/2 - Youkai Buster Ruka no Daibouken-01.webp", import.meta.url).href,
     category: "Action",
-    teaser: "",
+    teaser: "Primeiro Passo (2)",
     year: 1995,
-    developer: "Jaleco",
-    publisher: "Jaleco",
-  },
+    developer: "Sting Entertainment",
+    publisher: "Kadokawa Shoten",
+    score: 3,
+    review: `A jornada já começou com surpresas: o primeiro jogo selecionado tem uma versão diferente no Japão, então o review é o mesmo para ambos os jogos.
+
+The Jetsons - Invasion of the Planet Pirates saiu primeiro e com os controles meio imprecisos. O visual do desenho e dos mundos é bem qualquer coisa, mas a mecânica principal do sugador é bacana.
+
+A versão japonesa, Youkai Buster - Ruka no Daibouken veio depois e é mais precisa, os sprites são mais fofinhos e eu sou um weeb imundo, o que claramente influencia no gosto do que seria efetivamente o mesmo jogo
+
+Ambos são difíceis e obtusos, dei quit na quarta ou quinta fase do Ruka porque os bicho são arrombado demais`,  },
   {
     id: 3,
     title: "Hebereke's Popoon",
@@ -49,7 +81,7 @@ export const games: Game[] = [
     year: 1993,
     developer: "Sunsoft",
     publisher: "Sunsoft",
-  },
+    score: 2,  },
   {
     id: 4,
     title: "Foreman for Real",
@@ -60,7 +92,7 @@ export const games: Game[] = [
     year: 1995,
     developer: "Acclaim",
     publisher: "Acclaim",
-  },
+    score: 2,  },
   {
     id: 5,
     title: "Spirou",
@@ -71,7 +103,7 @@ export const games: Game[] = [
     year: 1994,
     developer: "Infogrames",
     publisher: "Infogrames",
-  },
+    score: 2,  },
   {
     id: 6,
     title: "Raiden Trad",
@@ -82,7 +114,7 @@ export const games: Game[] = [
     year: 1992,
     developer: "Micronics",
     publisher: "Electro Brain",
-  },
+    score: 2,  },
   {
     id: 7,
     title: "Jikkyou Oshaberi Parodius",
@@ -93,7 +125,7 @@ export const games: Game[] = [
     year: 1995,
     developer: "Konami",
     publisher: "Konami",
-  },
+    score: 4,  },
   {
     id: 8,
     title: "Zombies Ate My Neighbors",
@@ -104,7 +136,7 @@ export const games: Game[] = [
     year: 1993,
     developer: "LucasArts",
     publisher: "Konami",
-  },
+    score: 2,  },
   {
     id: 9,
     title: "Zen-Nihon GT Senshuken",
@@ -115,7 +147,7 @@ export const games: Game[] = [
     year: 1994,
     developer: "Human Entertainment",
     publisher: "Human Entertainment",
-  },
+    score: 3,  },
   {
     id: 10,
     title: "Tactics Ogre - Let Us Cling Together",
@@ -126,7 +158,7 @@ export const games: Game[] = [
     year: 1995,
     developer: "Quest",
     publisher: "Quest",
-  },
+    score: 5,  },
   {
     id: 11,
     title: "Blues Brothers, The",
@@ -137,7 +169,7 @@ export const games: Game[] = [
     year: 1993,
     developer: "Titus Software",
     publisher: "Titus Software",
-  },
+    score: 2,  },
   {
     id: 12,
     title: "Dragon Ball Z - Super Butouden 3",
@@ -148,7 +180,7 @@ export const games: Game[] = [
     year: 1994,
     developer: "TOSE",
     publisher: "Bandai",
-  },
+    score: 3,  },
   {
     id: 13,
     title: "True Lies",
@@ -159,7 +191,7 @@ export const games: Game[] = [
     year: 1994,
     developer: "Beam Software",
     publisher: "Acclaim",
-  },
+    score: 3,  },
   {
     id: 14,
     title: "Taz-Mania",
@@ -170,7 +202,7 @@ export const games: Game[] = [
     year: 1993,
     developer: "Recreational Brainware",
     publisher: "Sega",
-  },
+    score: 2,  },
   {
     id: 15,
     title: "U.F.O. Kamen Yakisoban",
@@ -181,7 +213,7 @@ export const games: Game[] = [
     year: 1993,
     developer: "Bandai",
     publisher: "Bandai",
-  },
+    score: 3,  },
   {
     id: 16,
     title: "Wolfchild",
@@ -192,7 +224,7 @@ export const games: Game[] = [
     year: 1993,
     developer: "Core Design",
     publisher: "JVC",
-  },
+    score: 1,  },
   {
     id: 17,
     title: "Pac-Man 2 - The New Adventures",
@@ -203,7 +235,7 @@ export const games: Game[] = [
     year: 1994,
     developer: "Namco",
     publisher: "Namco",
-  },
+    score: 2,  },
   {
     id: 18,
     title: "Wing Commander",
@@ -214,7 +246,7 @@ export const games: Game[] = [
     year: 1992,
     developer: "Origin Systems",
     publisher: "Mindscape",
-  },
+    score: 3,  },
   {
     id: 19,
     title: "Brutal - Paws of Fury",
@@ -225,7 +257,7 @@ export const games: Game[] = [
     year: 1994,
     developer: "Unexpected Development",
     publisher: "GameTek",
-  },
+    score: 3,  },
   {
     id: 20,
     title: "Super Dany",
@@ -236,7 +268,7 @@ export const games: Game[] = [
     year: 1993,
     developer: "Infogrames",
     publisher: "Infogrames",
-  },
+    score: 2,  },
   {
     id: 21,
     title: "ABC Monday Night Football",
@@ -247,7 +279,7 @@ export const games: Game[] = [
     year: 1993,
     developer: "Data East",
     publisher: "Data East",
-  },
+    score: 4,  },
   {
     id: 22,
     title: "Secret of Mana",
@@ -258,7 +290,7 @@ export const games: Game[] = [
     year: 1993,
     developer: "Square",
     publisher: "Square",
-  },
+    score: 4,  },
   {
     id: 23,
     title: "NBA Live 95",
@@ -269,7 +301,7 @@ export const games: Game[] = [
     year: 1994,
     developer: "EA Sports",
     publisher: "EA Sports",
-  },
+    score: 3,  },
   {
     id: 24,
     title: "Lost Vikings, The",
@@ -280,7 +312,7 @@ export const games: Game[] = [
     year: 1993,
     developer: "Silicon & Synapse",
     publisher: "Interplay",
-  },
+    score: 3,  },
   {
     id: 25,
     title: "Haou Taikei Ryuu Knight - Lord of Paladin",
@@ -291,7 +323,7 @@ export const games: Game[] = [
     year: 1994,
     developer: "Bandai",
     publisher: "Bandai",
-  },
+    score: 2,  },
   {
     id: 26,
     title: "Blue Crystalrod, The",
@@ -302,7 +334,7 @@ export const games: Game[] = [
     year: 1994,
     developer: "Data East",
     publisher: "Data East",
-  },
+    score: 1,  },
   {
     id: 27,
     title: "Jimmy Houston's Bass Tournament U.S.A.",
@@ -313,7 +345,7 @@ export const games: Game[] = [
     year: 1993,
     developer: "Black Pearl Software",
     publisher: "THQ",
-  },
+    score: 1,  },
   {
     id: 28,
     title: "Realm",
@@ -324,7 +356,7 @@ export const games: Game[] = [
     year: 1995,
     developer: "Software Creations",
     publisher: "Activision",
-  },
+    score: 2,  },
   {
     id: 29,
     title: "Super Mario All-Stars",
@@ -335,7 +367,7 @@ export const games: Game[] = [
     year: 1993,
     developer: "Nintendo",
     publisher: "Nintendo",
-  },
+    score: 5,  },
   {
     id: 30,
     title: "Micro Machines",
@@ -346,7 +378,7 @@ export const games: Game[] = [
     year: 1994,
     developer: "Codemasters",
     publisher: "Ocean",
-  },
+    score: 2,  },
   {
     id: 31,
     title: "Tecmo Super Bowl II - Special Edition",
@@ -357,7 +389,7 @@ export const games: Game[] = [
     year: 1994,
     developer: "Tecmo",
     publisher: "Tecmo",
-  },
+    score: 2,  },
   {
     id: 32,
     title: "FIFA International Soccer",
@@ -368,7 +400,7 @@ export const games: Game[] = [
     year: 1994,
     developer: "Extended Play Productions",
     publisher: "EA Sports",
-  },
+    score: 2,  },
   {
     id: 33,
     title: "Great Circus Mystery Starring Mickey & Minnie, The",
@@ -379,7 +411,7 @@ export const games: Game[] = [
     year: 1994,
     developer: "Capcom",
     publisher: "Capcom",
-  },
+    score: 2,  },
   {
     id: 34,
     title: "Dungeon Master",
@@ -390,7 +422,7 @@ export const games: Game[] = [
     year: 1993,
     developer: "FTL Games",
     publisher: "JVC",
-  },
+    score: 1,  },
   {
     id: 35,
     title: "Monopoly",
@@ -401,7 +433,7 @@ export const games: Game[] = [
     year: 1991,
     developer: "Sculptured Software",
     publisher: "Parker Brothers",
-  },
+    score: 3,  },
   {
     id: 36,
     title: "Shinri Game 2, The - Magical Trip",
@@ -412,7 +444,7 @@ export const games: Game[] = [
     year: 1993,
     developer: "Tomy",
     publisher: "Tomy",
-  },
+    score: 1,  },
   {
     id: 37,
     title: "Tecmo Super Bowl",
@@ -423,7 +455,7 @@ export const games: Game[] = [
     year: 1993,
     developer: "Tecmo",
     publisher: "Tecmo",
-  },
+    score: 3,  },
   {
     id: 38,
     title: "College Slam",
@@ -434,7 +466,7 @@ export const games: Game[] = [
     year: 1996,
     developer: "Sculptured Software",
     publisher: "Acclaim",
-  },
+    score: 2,  },
   {
     id: 39,
     title: "Side Pocket",
@@ -445,7 +477,7 @@ export const games: Game[] = [
     year: 1993,
     developer: "Data East",
     publisher: "Data East",
-  },
+    score: 3,  },
   {
     id: 40,
     title: "Road Runner's Death Valley Rally",
@@ -456,7 +488,7 @@ export const games: Game[] = [
     year: 1992,
     developer: "Sunsoft",
     publisher: "Sunsoft",
-  },
+    score: 1,  },
   {
     id: 41,
     title: "Super Tekkyuu Fight!",
@@ -467,7 +499,7 @@ export const games: Game[] = [
     year: 1993,
     developer: "Banpresto",
     publisher: "Banpresto",
-  },
+    score: 2,  },
   {
     id: 42,
     title: "Battle Dodge Ball",
