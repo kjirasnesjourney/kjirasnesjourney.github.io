@@ -56,10 +56,11 @@ const Article = () => {
         {/* Game Header — boxart as opaque background */}
         <header className="relative flex flex-col items-center text-center mt-[4.5rem] xl:mt-[6rem] px-4 py-16 overflow-hidden">
           {/* Background boxart */}
-          <div
-            className="absolute inset-0 bg-center bg-no-repeat bg-contain opacity-10 pointer-events-none"
-            style={{ backgroundImage: `url(${game.image})` }}
+          <img
+            src={game.image}
+            alt=""
             aria-hidden="true"
+            className="absolute inset-0 w-full h-full object-contain object-center opacity-10 pointer-events-none"
           />
           {/* Gradient fade at bottom */}
           <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-background to-transparent pointer-events-none" />
@@ -94,7 +95,7 @@ const Article = () => {
             <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
               <iframe
                 className="absolute inset-0 w-full h-full rounded-lg"
-                src={`https://www.youtube.com/embed/${game.youtubeId}`}
+                src={`https://www.youtube-nocookie.com/embed/${game.youtubeId}`}
                 title={`${game.title} — live playthrough`}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
