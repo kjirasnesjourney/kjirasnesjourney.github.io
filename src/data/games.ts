@@ -14,6 +14,7 @@ export interface Game {
   year?: number;
   developer?: string;
   publisher?: string;
+  youtubeId?: string;
 }
 
 export const games: Game[] = [
@@ -27,6 +28,7 @@ export const games: Game[] = [
     developer: "Sting Entertainment",
     publisher: "Taito",
     score: 2,
+    youtubeId: "https://www.youtube.com/watch?v=YvWVaFSmoBY",
     teaser: "Primeiro Passo",
     review: `<p>A jornada já começou com surpresas: o primeiro jogo selecionado tem uma versão diferente no Japão, então o review é o mesmo para ambos os jogos.</p><p>The Jetsons - Invasion of the Planet Pirates saiu primeiro e com os controles meio imprecisos. O visual do desenho e dos mundos é bem qualquer coisa, mas a mecânica principal do sugador é bacana.</p><p>A versão japonesa, Youkai Buster - Ruka no Daibouken veio depois e é mais precisa, os sprites são mais fofinhos e eu sou um weeb imundo, o que claramente influencia no gosto do que seria efetivamente o mesmo jogo.</p><p>Ambos são difíceis e obtusos, dei quit na quarta ou quinta fase do Ruka porque os bicho são arrombado demais.</p>`,
   },
@@ -35,7 +37,7 @@ export const games: Game[] = [
     title: "Youkai Buster Ruka no Daibouken",
     slug: "youkai-buster-ruka",
     image: new URL("../assets/boxarts/2 - Youkai Buster Ruka no Daibouken-01.webp", import.meta.url).href,
-    category: "Action",
+    category: "Platformer",
     teaser: "Primeiro Passo (2)",
     year: 1995,
     developer: "Sting Entertainment",
@@ -180,7 +182,7 @@ export const games: Game[] = [
     title: "U.F.O. Kamen Yakisoban",
     slug: "ufo-kamen-yakisoban",
     image: new URL("../assets/boxarts/15 - U.F.O. Kamen Yakisoban - Kettler no Kuroi Inbou (Japan).webp", import.meta.url).href,
-    category: "Action",
+    category: "Beat 'em up",
     teaser: "",
     year: 1993,
     developer: "Bandai",

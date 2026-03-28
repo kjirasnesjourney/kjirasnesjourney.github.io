@@ -53,39 +53,64 @@ const Article = () => {
 
       <article className="flex flex-col">
 
-        {/* Game Header */}
-        <header className="box-content max-w-[138rem] px-4 md:px-[calc(18vw-10rem)] mx-auto flex flex-col items-center mt-[4.5rem] xl:mt-[6rem] text-center">
-          <span className="text-primary uppercase tracking-widest text-[1.4rem] font-semibold mb-4">
-            {game.category}
-          </span>
-          <h1 className="inline-block max-w-[90rem] mt-0 mb-[1rem] text-[3.4rem] md:text-[4.2rem] lg:text-[6rem] font-semibold tracking-[-0.01em] leading-[1.2] md:leading-[1]">
-            {game.title}
-          </h1>
+        {/* Game Header — boxart as opaque background */}
+        <header className="relative flex flex-col items-center text-center mt-[4.5rem] xl:mt-[6rem] px-4 py-16 overflow-hidden">
+          {/* Background boxart */}
+          <div
+            className="absolute inset-0 bg-center bg-no-repeat bg-contain opacity-10 pointer-events-none"
+            style={{ backgroundImage: `url(${game.image})` }}
+            aria-hidden="true"
+          />
+          {/* Gradient fade at bottom */}
+          <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-background to-transparent pointer-events-none" />
 
-          {/* Meta row */}
-          <div className="flex flex-wrap items-center justify-center gap-6 text-[1.5rem] text-muted-foreground mt-2 mb-6">
-            {game.year && <span>{game.year}</span>}
-            {game.developer && <span>{game.developer}</span>}
-            {game.publisher && game.publisher !== game.developer && <span>{game.publisher}</span>}
-          </div>
+          <div className="relative z-10 max-w-[90rem] mx-auto">
+            <span className="text-primary uppercase tracking-widest text-[1.4rem] font-semibold mb-4 block">
+              {game.category}
+            </span>
+            <h1 className="mt-0 mb-[1rem] text-[3.4rem] md:text-[4.2rem] lg:text-[6rem] font-semibold tracking-[-0.01em] leading-[1.2] md:leading-[1]">
+              {game.title}
+            </h1>
 
-          {/* Score */}
-          {game.score && (
-            <div className="mb-8">
-              <ScoreStars score={game.score} />
+            {/* Meta row */}
+            <div className="flex flex-wrap items-center justify-center gap-6 text-[1.5rem] text-muted-foreground mt-2 mb-6">
+              {game.year && <span>{game.year}</span>}
+              {game.developer && <span>{game.developer}</span>}
+              {game.publisher && game.publisher !== game.developer && <span>{game.publisher}</span>}
             </div>
-          )}
+
+            {/* Score */}
+            {game.score && (
+              <div className="mb-2 flex justify-center">
+                <ScoreStars score={game.score} />
+              </div>
+            )}
+          </div>
         </header>
 
-        {/* Box Art Hero */}
-        <figure className="relative flex overflow-hidden w-full mt-[3rem] md:mt-[4.5rem] lg:mt-[6rem] justify-center bg-muted/30">
-          <img
-            src={game.image}
-            alt={`${game.title} box art`}
-            loading="lazy"
-            className="max-h-[60vh] w-auto object-contain"
-          />
-        </figure>
+        {/* YouTube embed or boxart fallback */}
+        <div className="w-full max-w-[90rem] mx-auto px-4 md:px-[calc(18vw-10rem)] mt-[2rem] md:mt-[3rem]">
+          {game.youtubeId ? (
+            <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
+              <iframe
+                className="absolute inset-0 w-full h-full rounded-lg"
+                src={`https://www.youtube.com/embed/${game.youtubeId}`}
+                title={`${game.title} — live playthrough`}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          ) : (
+            <figure className="flex justify-center bg-muted/30 rounded-lg py-8">
+              <img
+                src={game.image}
+                alt={`${game.title} box art`}
+                loading="lazy"
+                className="max-h-[50vh] w-auto object-contain"
+              />
+            </figure>
+          )}
+        </div>
 
         {/* Review Body */}
         <div className="box-content max-w-[64rem] px-4 md:px-[calc(18vw-10rem)] mx-auto mt-[4rem] md:mt-[6rem] lg:mt-[8rem] mb-[6rem]">
