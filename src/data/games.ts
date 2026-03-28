@@ -15,6 +15,7 @@ export interface Game {
   developer?: string;
   publisher?: string;
   youtubeId?: string;
+  countAs?: number;
 }
 
 export const games: Game[] = [
@@ -43,6 +44,7 @@ export const games: Game[] = [
     developer: "Sting Entertainment",
     publisher: "Kadokawa Shoten",
     score: 3,
+    countAs: 1,
     review: `<p>A jornada já começou com surpresas: o primeiro jogo selecionado tem uma versão diferente no Japão, então o review é o mesmo para ambos os jogos.</p><p>The Jetsons - Invasion of the Planet Pirates saiu primeiro e com os controles meio imprecisos. O visual do desenho e dos mundos é bem qualquer coisa, mas a mecânica principal do sugador é bacana.</p><p>A versão japonesa, Youkai Buster - Ruka no Daibouken veio depois e é mais precisa, os sprites são mais fofinhos e eu sou um weeb imundo, o que claramente influencia no gosto do que seria efetivamente o mesmo jogo.</p><p>Ambos são difíceis e obtusos, dei quit na quarta ou quinta fase do Ruka porque os bicho são arrombado demais.</p>`,
   },
   {

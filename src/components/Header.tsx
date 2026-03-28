@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-
+import ProgressBar from "@/components/ProgressBar";
 import logo from "@/assets/logo.png";
 
 const navLinks = [
@@ -30,6 +30,8 @@ const Header = () => {
           <Link to="/" aria-label="Kjira's SNES Journey - Home">
             <img src={logo} alt="Kjira's SNES Journey" className="h-[128px] w-auto" />
           </Link>
+
+          <ProgressBar />
 
           <Sheet>
             <SheetTrigger asChild>

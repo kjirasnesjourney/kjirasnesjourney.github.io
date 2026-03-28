@@ -90,11 +90,11 @@ const Article = () => {
         </header>
 
         {/* YouTube embed or boxart fallback */}
-        <div className="w-full max-w-[90rem] mx-auto px-4 md:px-[calc(18vw-10rem)] mt-[2rem] md:mt-[3rem]">
+        <div className="w-full max-w-[100rem] mx-auto px-4 mt-[2rem] md:mt-[3rem]">
           {game.youtubeId ? (
             <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
               <iframe
-                className="absolute inset-0 w-full h-full rounded-lg"
+                className="absolute inset-0 w-full h-full"
                 src={`https://www.youtube-nocookie.com/embed/${game.youtubeId}`}
                 title={`${game.title} — live playthrough`}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -102,7 +102,7 @@ const Article = () => {
               />
             </div>
           ) : (
-            <figure className="flex justify-center bg-muted/30 rounded-lg py-8">
+            <figure className="flex justify-center bg-muted/30 py-8">
               <img
                 src={game.image}
                 alt={`${game.title} box art`}
