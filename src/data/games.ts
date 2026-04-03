@@ -546,7 +546,7 @@ export const games: Game[] = [
     id: 43,
     title: "Gemfire",
     slug: "gemfire",
-    image: new URL("../assets/boxarts/42 - Gemfire (USA).webp", import.meta.url).href,
+    image: new URL("../assets/boxarts/43 - Gemfire (USA).webp", import.meta.url).href,
     category: "Strategy",
     year: 1992,
     developer: "Koei",
