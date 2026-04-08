@@ -556,6 +556,18 @@ export const games: Game[] = [
     teaser: "Not so Great Strategy",
     dbPlayorder: 42,
   },
+ 
+  {
+    id: 44,
+    title: "The Mahjong Touhaiden",
+    slug: "the-mahjong-touhaiden",
+    image: new URL("../assets/boxarts/43 - Mahjong Touhaiden, The (Japan).webp", import.meta.url).href,
+    category: "Uncategorized",
+    teaser: "Não sei jogar mahjong",
+    score: 2,
+    dbPlayorder: 43,
+    youtubeId: "oHK9V6bkmIc",
+    review: `<p>Para o primeiro jogo de mahjong que peguei na jornada, parece bacana. Tem umas opções de itens que não explorei, mas tão lá. Curiosamente, meu nihongo não foi o problema pra esse jogo, mas sim não lembrar as regras de mahjong mesmo. Um dia quem sabe?</p>`,  },
 ];
 
 // Unique categories derived from the games list
