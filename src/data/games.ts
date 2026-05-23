@@ -607,7 +607,7 @@ export const games: Game[] = [
   {
     id: 47,
     title: "Tiny Toon Adventures: Wacky Sports Challenge\Tiny Toon Adventures: Wild & Wacky SportsPAL\Tiny Toon Adventures: Dotabata DaiundoukaiJP",
-    slug: "tiny-toon-adventures-wacky-sports-challenge-tiny-toon-adventures-wild-wacky-sportspal-tiny-toon-adventures-dotabata-daiundoukaijp",
+    slug: "tiny-toon-adventures-wacky-sports-challenge",
     image: new URL("../assets/boxarts/46 - Tiny Toon Adventures - Wacky Sports Challenge (USA).webp", import.meta.url).href,
     category: "Sports",
     teaser: "Minigames sem muita explicação",
