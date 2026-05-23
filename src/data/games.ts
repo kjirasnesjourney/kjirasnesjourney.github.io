@@ -3,7 +3,8 @@
 
 export interface Game {
   id: number;
-  title: string;
+  title: string;          // raw title from DB (may contain regional variants)
+  displayTitle?: string;  // override shown on the site; falls back to title
   slug: string;
   image: string;
   category: string;
@@ -608,7 +609,7 @@ export const games: Game[] = [
     title: "Tiny Toon Adventures: Wacky Sports Challenge\Tiny Toon Adventures: Wild & Wacky SportsPAL\Tiny Toon Adventures: Dotabata DaiundoukaiJP",
     slug: "tiny-toon-adventures-wacky-sports-challenge-tiny-toon-adventures-wild-wacky-sportspal-tiny-toon-adventures-dotabata-daiundoukaijp",
     image: new URL("../assets/boxarts/46 - Tiny Toon Adventures - Wacky Sports Challenge (USA).webp", import.meta.url).href,
-    category: "Uncategorized",
+    category: "Sports",
     teaser: "Minigames sem muita explicação",
     score: 2,
     year: 1994,
@@ -617,13 +618,14 @@ export const games: Game[] = [
     dbPlayorder: 46,
     youtubeId: "i-m2mTp2SMg",
     review: `<p>Esse jogo foi o segundo que tive problemas técnicos e acabei upando sem áudio, mas sinceramente o jogo em si não me anima em nada pra rejogar e upar certo. São diversos minigames com os Tiny Toons (que esqueci o nome em português mas talvez lembre quando cair outro na roleta) onde o que tem que ser feito é meio mal explicado e caso não seja atingido um score mínimo é game over. Esse jogo me fez perceber o quão bom é o game design de Mario Party, mesmo o primeiro esculhambando o analogico do Nintendo 64.</p>`,
+    displayTitle: "Tiny Toon Adventures: Wacky Sports Challenge",
   },
   {
     id: 48,
     title: "Aladdin",
     slug: "aladdin",
     image: new URL("../assets/boxarts/47 - Aladdin (USA).webp", import.meta.url).href,
-    category: "Uncategorized",
+    category: "Platformer",
     teaser: "Jogos Disney",
     score: 4,
     year: 1993,
