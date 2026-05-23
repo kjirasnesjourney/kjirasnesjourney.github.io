@@ -555,6 +555,7 @@ export const games: Game[] = [
     youtubeId: "BrMsi01WmRI",
     teaser: "Not so Great Strategy",
     dbPlayorder: 42,
+    review: `<p>Uma versão de fantasia medieval da série Romance of the Three Kingdoms da Koei. É bem humilde graficamente falando, não da pra entender quase nada sem manual ou um guia. Como os outros jogos dessa série que forem caindo pra jogar, vai ser só abrir pra ver a cara dos generais e é isto.</p>`,
   },
  
   {
