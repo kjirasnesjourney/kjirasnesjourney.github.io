@@ -41,11 +41,11 @@ const Blog = () => {
       {/* Featured Game */}
       <Section>
         <BlogHighlight
-          title={featuredGame.title}
+          title={featuredGame.displayTitle ?? featuredGame.title}
           description={featuredGame.teaser || "My thoughts on this SNES classic."}
           href={`/article/${featuredGame.slug}`}
           imageSrc={featuredGame.image}
-          imageAlt={featuredGame.title}
+          imageAlt={featuredGame.displayTitle ?? featuredGame.title}
         />
       </Section>
 
@@ -60,10 +60,10 @@ const Blog = () => {
               style={{ animationDelay: `${(index % 3) * 150}ms` }}
             >
               <ArticlePreview
-                title={game.title}
+                title={game.displayTitle ?? game.title}
                 slug={game.slug}
                 image={game.image}
-                imageAlt={game.title}
+                imageAlt={game.displayTitle ?? game.title}
                 category={game.category}
                 categorySlug={game.category.toLowerCase()}
                 teaser={game.teaser || "My thoughts on this SNES game."}
@@ -128,10 +128,10 @@ const Blog = () => {
               style={{ animationDelay: `${(index % 3) * 150}ms` }}
             >
               <ArticlePreview
-                title={game.title}
+                title={game.displayTitle ?? game.title}
                 slug={game.slug}
                 image={game.image}
-                imageAlt={game.title}
+                imageAlt={game.displayTitle ?? game.title}
                 category={game.category}
                 categorySlug={game.category.toLowerCase()}
                 teaser={game.teaser || "My thoughts on this SNES game."}

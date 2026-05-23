@@ -70,7 +70,7 @@ const Article = () => {
               {game.category}
             </span>
             <h1 className="mt-0 mb-[1rem] text-[3.4rem] md:text-[4.2rem] lg:text-[6rem] font-semibold tracking-[-0.01em] leading-[1.2] md:leading-[1]">
-              {game.title}
+              {game.displayTitle ?? game.title}
             </h1>
 
             {/* Meta row */}
@@ -153,7 +153,7 @@ const Article = () => {
           </div>
           <ArticleRelatedItems
             items={related.map((g) => ({
-              title: g.title,
+              title: g.displayTitle ?? g.title,
               slug: g.slug,
               image: g.image,
               description: g.teaser || "My thoughts on this SNES game.",
